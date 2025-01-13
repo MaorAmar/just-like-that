@@ -40,8 +40,7 @@ function sortRandB2(arr){
     }
     return arr;
 }
-const arr = ['R','R','R','B'];
-
-//const arr = ['R','B','R','B','B','B','B','R','R','B'];
-console.log(sortRandB(arr));
+const arr = ['R','R','R','B','R']
 console.log(sortRandB2(arr));
+module.exports.sortRandB = sortRandB;
+module.exports.sortRandB2 = sortRandB2;

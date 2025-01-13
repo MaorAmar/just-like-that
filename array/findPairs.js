@@ -18,7 +18,7 @@ function findParirsEqualToZero(arr){
     let result = [sortedArr[0],sortedArr[sortedArr.length-1]]
     result = [];
     while (i < j){
-        if ( Math.abs(sortedArr[i] + sortedArr[j]) < Math.abs(sum) ) {
+        if ( Math.abs(sortedArr[i] + sortedArr[j]) <= Math.abs(sum) ) {
             sum = sortedArr[i] + sortedArr[j];
             result.length = 0;
             result.push(sortedArr[i], sortedArr[j]);
@@ -28,5 +28,4 @@ function findParirsEqualToZero(arr){
     }
     return result;
 }
-const arr = [-9,-60,-11,-20,25];
-console.log(findParirsEqualToZero(arr));
+module.exports.findParirsEqualToZero = findParirsEqualToZero;
