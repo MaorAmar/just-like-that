@@ -11,7 +11,6 @@ function reversNumber(num){
     }
     if (minus === true) result *= -1;
     return result;
-     //test
 
 }
 
