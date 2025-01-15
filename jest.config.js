@@ -21,15 +21,15 @@ const config = {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: ['just-like-that/**/*.js'],
+  collectCoverageFrom: ['syntax1/**/*.js'],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'converage',
 
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: [
-    "node_modules",
-    '<rootDir>/just-like-that/every.js'
+      "node_modules",
+      '<rootDir>/syntax1/every.js'
   ],
 
   // Indicates which provider should be used to instrument code for coverage
@@ -196,14 +196,14 @@ const config = {
   // watchman: true,
 
 
-  "reporters": [
-    "default",
-    ["jest-html-reporters", {
-      "publicPath": "./html-report",
-      "filename": "report.html",
-      "openReport": true
-    }]
-  ],
+    "reporters": [
+        "default",
+        ["jest-html-reporters", {
+            "publicPath": "./html-report",
+            "filename": "report.html",
+            "openReport": true
+        }]
+    ],
 };
 
 module.exports = config;
