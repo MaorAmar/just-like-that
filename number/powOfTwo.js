@@ -3,6 +3,7 @@ function powOfTwo(n){
     const obj = {};
     let result = true;
     if (n === 0) result = false;
+
     for (const c of binaryNumber) {
         if(!obj.hasOwnProperty(c)) obj[c] = 1;
         else {
@@ -10,9 +11,9 @@ function powOfTwo(n){
                 result = false;
                 break;
             }
+            obj[c] += 1;
         }
     }
-
     return result;
 }
 
