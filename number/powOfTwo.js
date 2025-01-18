@@ -17,4 +17,18 @@ function powOfTwo(n){
     return result;
 }
 
+function powOfTwo2(n){
+    let result = true;
+    if (n === 0) result = false;
+    while( n > 1){
+        if (n % 1 !== 0){
+            result = false;
+            break;
+        }
+        else n = n/2;
+    }
+    return result;
+}
+
+module.exports.powOfTwo2 = powOfTwo2;
 module.exports.powOfTwo = powOfTwo;
