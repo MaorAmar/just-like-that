@@ -9,6 +9,7 @@ function subarrayWithGivenSum(arr,S){
             sum -= arr[j];
             j++;
             i--;
+            if(j > i) break;
         }
         else return [j+1,i+1]
     }

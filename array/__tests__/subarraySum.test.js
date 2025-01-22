@@ -36,8 +36,8 @@ describe('subArrayWithGivenSum', () => {
     });
 
     test('No subarray matches the sum', () => {
-        const arr = [1, 2, 3, 4, 5];
-        const S = 20;
+        const arr = [19,23,15,6,6,2,28,2];
+        const S = 2;
         const result = subarrayWithGivenSum(arr, S);
         expect(result).toBe(-1);
     });
