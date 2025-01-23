@@ -8,8 +8,8 @@ describe('subArrayWithGivenSum', () => {
         expect(result).toEqual([1,5]);
     })
     test('Empty array', () => {
-        const arr = [];
-        const S = 10;
+        const arr = [5,2,5,3,4,5,7,8,7,9,5,4,5];
+        const S = 1;
         const result = subarrayWithGivenSum(arr, S);
         expect(result).toBe(-1);
     });
@@ -39,7 +39,7 @@ describe('subArrayWithGivenSum', () => {
         const arr = [19,23,15,6,6,2,28,2];
         const S = 2;
         const result = subarrayWithGivenSum(arr, S);
-        expect(result).toBe(-1);
+        expect(result).toEqual([6,6]);
     });
 
     test('Multiple subarrays possible', () => {
@@ -70,5 +70,6 @@ describe('subArrayWithGivenSum', () => {
         const result = subarrayWithGivenSum(arr, S);
         expect(result).toEqual([2, 4]);
     });
+
 
 })

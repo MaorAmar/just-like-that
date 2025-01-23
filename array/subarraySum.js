@@ -1,15 +1,16 @@
 function subarrayWithGivenSum(arr,S){
-    let sum = 0;
-    let j = 0;
-    for(let i = 0;i < arr.length;i++){
+    let sum = 0,i = 0, j = 0;
+    while(i < arr.length) {
         if ( sum + arr[i] < S){
-            sum += arr[i];
+            sum += arr[i++];
         }
         else if ( sum + arr[i] > S) {
             sum -= arr[j];
             j++;
-            i--;
-            if(j > i) break;
+            if(j > i) {
+                sum += arr[i];
+                i = j;
+            }
         }
         else return [j+1,i+1]
     }
