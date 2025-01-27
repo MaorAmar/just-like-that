@@ -19,28 +19,23 @@ function stringCompression(chars) {
 
 function stringCompressionInPlace(chars) {
     let counter = 0;
-    for(let i = chars.length - 1;i >= 0;i--){
-        if(counter === 0) {
-            if (chars[i] !== chars[i - 1]) continue;
-            else counter++;
-        }
+
+    for(let i = chars.length - 1;i >= 0;i--) {
+        if (chars[i] === chars[i - 1]) counter++
         else {
-            if(chars[i] === chars[i - 1]) counter++;
-            else {
+            if (counter > 0) {
                 counter++;
-                if(counter >= 10){
+                if (counter >= 10) {
                     const counterArr = counter.toString().split("");
-                    chars.splice(i + 1,counter - 1, ...counterArr);
-                }
-                else{
-                    chars.splice(i + 1,counter - 1,counter.toString());
+                    chars.splice(i + 1, counter - 1, ...counterArr);
+                } else {
+                    chars.splice(i + 1, counter - 1, counter.toString());
                 }
                 counter = 0;
-            }
+            } else continue;
         }
     }
     return chars;
 }
-
 module.exports.stringCompression = stringCompression;
 module.exports.stringCompressionInPlace = stringCompressionInPlace
