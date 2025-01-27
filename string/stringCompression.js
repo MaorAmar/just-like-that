@@ -1,4 +1,4 @@
-function stringCompression(chars) {
+function stringCompressionObj(chars) {
     const obj = {};
     let result = [];
     for (const char of chars){
@@ -37,5 +37,6 @@ function stringCompressionInPlace(chars) {
     }
     return chars;
 }
-module.exports.stringCompression = stringCompression;
+
+module.exports.stringCompressionObj = stringCompressionObj;
 module.exports.stringCompressionInPlace = stringCompressionInPlace
