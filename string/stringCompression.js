@@ -1,22 +1,3 @@
-function stringCompressionObj(chars) {
-    const obj = {};
-    let result = [];
-    for (const char of chars){
-        if(!obj.hasOwnProperty(char)) obj[char] = 1;
-        else obj[char]++;
-    }
-    for(const [key, val] of Object.entries(obj)){
-        if(val === 1) result.push(key.toString());
-        else if(val < 10) result.push(key.toString(),val.toString());
-        else{
-            result.push(key.toString());
-            const newVal = val.toString().split("");
-            result.push(...newVal);
-        }
-    }
-    return result;
-}
-
 function stringCompressionInPlace(chars) {
     let counter = 0;
 
