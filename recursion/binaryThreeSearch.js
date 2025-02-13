@@ -20,8 +20,8 @@ const sortedRoot = new Node(6,
 function binaryThreeSearch(node, value){
     if(!node) return;
     if(node.value === value) return node;
-    if(node.value > value) return sortedSearch(node.left, value);
-    else return sortedSearch(node.right, value);
+    if(node.value > value) return binaryThreeSearch(node.left, value);
+    else return binaryThreeSearch(node.right, value);
 }
 
 console.log(binaryThreeSearch(sortedRoot,11));
